@@ -1,0 +1,131 @@
+﻿[
+  {
+    "Name": "Leak Repair",
+    "CategoryId": 2
+  },
+  {
+    "Name": "Pipe Installation",
+    "CategoryId": 2
+  },
+  {
+    "Name": "Toilet Fixing",
+    "CategoryId": 2
+  },
+
+  {
+    "Name": "Wiring",
+    "CategoryId": 3
+  },
+  {
+    "Name": "Light Installation",
+    "CategoryId": 3
+  },
+  {
+    "Name": "Circuit Breaker Repair",
+    "CategoryId": 3
+  },
+
+  {
+    "Name": "Interior Painting",
+    "CategoryId": 4
+  },
+  {
+    "Name": "Exterior Painting",
+    "CategoryId": 4
+  },
+  {
+    "Name": "Wall Preparation",
+    "CategoryId": 4
+  },
+
+  {
+    "Name": "House Cleaning",
+    "CategoryId": 5
+  },
+  {
+    "Name": "Deep Cleaning",
+    "CategoryId": 5
+  },
+  {
+    "Name": "Post Construction Cleaning",
+    "CategoryId": 5
+  },
+
+  {
+    "Name": "Furniture Assembly",
+    "CategoryId": 6
+  },
+  {
+    "Name": "Custom Cabinets",
+    "CategoryId": 6
+  },
+  {
+    "Name": "Door Repairs",
+    "CategoryId": 6
+  },
+
+  {
+    "Name": "Tile Installation",
+    "CategoryId": 7
+  },
+  {
+    "Name": "Laminate Flooring",
+    "CategoryId": 7
+  },
+  {
+    "Name": "Marble Polishing",
+    "CategoryId": 7
+  },
+
+  {
+    "Name": "AC Installation",
+    "CategoryId": 8
+  },
+  {
+    "Name": "AC Maintenance",
+    "CategoryId": 8
+  },
+  {
+    "Name": "Vent Cleaning",
+    "CategoryId": 8
+  },
+
+  {
+    "Name": "Glass Replacement",
+    "CategoryId": 9
+  },
+  {
+    "Name": "Window Sealing",
+    "CategoryId": 9
+  },
+  {
+    "Name": "Shutter Installation",
+    "CategoryId": 9
+  },
+
+  {
+    "Name": "Alarm Systems",
+    "CategoryId": 10
+  },
+  {
+    "Name": "CCTV Setup",
+    "CategoryId": 10
+  },
+  {
+    "Name": "Motion Detectors",
+    "CategoryId": 10
+  },
+
+  {
+    "Name": "Smart Lighting",
+    "CategoryId": 11
+  },
+  {
+    "Name": "Voice Assistant Setup",
+    "CategoryId": 11
+  },
+  {
+    "Name": "Smart Thermostats",
+    "CategoryId": 11
+  }
+]
