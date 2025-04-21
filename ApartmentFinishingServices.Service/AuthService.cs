@@ -25,7 +25,8 @@ namespace ApartmentFinishingServices.Service
         {
             var authClaims = new List<Claim>() {
                 new Claim(ClaimTypes.GivenName , user.UserName),
-                new Claim(ClaimTypes.Email , user.Email)
+                new Claim(ClaimTypes.Email , user.Email),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
             var userRoles = await userManager.GetRolesAsync(user);
             foreach (var role in userRoles)

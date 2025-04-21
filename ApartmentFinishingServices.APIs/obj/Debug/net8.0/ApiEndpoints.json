@@ -79,43 +79,12 @@
   },
   {
     "ContainingType": "ApartmentFinishingServices.APIs.Controllers.AccountController",
-    "Method": "RegisterWorkerAccount",
-    "RelativePath": "api/Account/register/worker/account",
+    "Method": "RegisterAsWorker",
+    "RelativePath": "api/Account/register/worker",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "model",
-        "Type": "ApartmentFinishingServices.APIs.Dtos.RegisterBaseDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ApartmentFinishingServices.APIs.Dtos.UserResponseBaseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.AccountController",
-    "Method": "CompleteWorkerProfile",
-    "RelativePath": "api/Account/register/worker/profile/{workerId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "workerId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
       {
         "Name": "model",
         "Type": "ApartmentFinishingServices.APIs.Dtos.RegisterAsWorkerDto",
@@ -136,7 +105,7 @@
   },
   {
     "ContainingType": "ApartmentFinishingServices.APIs.Controllers.CategoriesController",
-    "Method": "GetCategory",
+    "Method": "GetCategories",
     "RelativePath": "api/Categories",
     "HttpMethod": "GET",
     "IsController": true,
@@ -177,7 +146,7 @@
   },
   {
     "ContainingType": "ApartmentFinishingServices.APIs.Controllers.CategoriesController",
-    "Method": "GetProduct",
+    "Method": "GetCategory",
     "RelativePath": "api/Categories/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -202,9 +171,9 @@
     ]
   },
   {
-    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.ServicesController",
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.CategoriesController",
     "Method": "GetServices",
-    "RelativePath": "api/Services",
+    "RelativePath": "api/Categories/services",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -243,9 +212,9 @@
     ]
   },
   {
-    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.ServicesController",
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.CategoriesController",
     "Method": "GetService",
-    "RelativePath": "api/Services/{id}",
+    "RelativePath": "api/Categories/services/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -259,6 +228,221 @@
     "ReturnTypes": [
       {
         "Type": "ApartmentFinishingServices.APIs.Dtos.ServiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.CitiesController",
+    "Method": "GetCities",
+    "RelativePath": "api/Cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.CityDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "CreateRequest",
+    "RelativePath": "api/Requests",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WorkerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CustomerSuggestedPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "AcceptRequest",
+    "RelativePath": "api/Requests/accept/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "CounterOffer",
+    "RelativePath": "api/Requests/counter-offer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "GetMyRequests",
+    "RelativePath": "api/Requests/my-requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto, ApartmentFinishingServices.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "GetReceivedRequests",
+    "RelativePath": "api/Requests/received-requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto, ApartmentFinishingServices.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "RejectRequest",
+    "RelativePath": "api/Requests/reject/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApartmentFinishingServices.APIs.Controllers.RequestsController",
+    "Method": "CustomerRespond",
+    "RelativePath": "api/Requests/respond/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "response",
+        "Type": "ApartmentFinishingServices.APIs.Dtos.CustomerResponseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApartmentFinishingServices.APIs.Dtos.RequestToReturnDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -14,6 +14,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ApartmentFinishingServices.APIs.Extenstions;
 using ApartmentFinishingServices.Repository.Identity.IdentitySeed;
+using ApartmentFinishingServices.Core;
 
 namespace ApartmentFinishingServices.APIs
 {
@@ -34,7 +35,12 @@ namespace ApartmentFinishingServices.APIs
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+            builder.Services.AddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
+            builder.Services.AddScoped(typeof(IRequestService), typeof(RequestService));
             builder.Services.AddScoped(typeof(IGenricRepository<>), typeof(GenricRepository<>));
+            builder.Services.AddScoped(typeof(ICategoryService), typeof(CategoryService));
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddAutoMapper(typeof(MappingProfiles));
             builder.Services.AddIdentityServices(builder.Configuration);
@@ -42,7 +48,7 @@ namespace ApartmentFinishingServices.APIs
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowReactApp",
-                    policy => policy.WithOrigins("http://localhost:5173")
+                    policy => policy.AllowAnyOrigin()
                                     .AllowAnyMethod()
                                     .AllowAnyHeader());
             });
@@ -82,8 +88,9 @@ namespace ApartmentFinishingServices.APIs
 
             app.UseStaticFiles();
 
-            app.UseAuthorization();
+            app.UseAuthentication();
 
+            app.UseAuthorization();
 
             app.MapControllers();
 

@@ -87,36 +87,6 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.ToTable("Cities");
                 });
 
-            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.AppRole", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles", (string)null);
-                });
-
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.AppUser", b =>
                 {
                     b.Property<int>("Id")
@@ -129,7 +99,6 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("Age")
@@ -412,7 +381,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.ToTable("SavedWorkers");
                 });
 
-            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Service", b =>
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Services", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -432,6 +401,36 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -578,7 +577,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ApartmentFinishingServices.Core.Entities.Service", "Service")
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Services", "Service")
                         .WithMany("Workers")
                         .HasForeignKey("ServiceId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -613,21 +612,21 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Request", b =>
                 {
                     b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.Customer", "Customer")
-                        .WithMany("Requests")
+                        .WithMany()
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ApartmentFinishingServices.Core.Entities.Service", "Service")
-                        .WithMany("Requests")
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Services", "Service")
+                        .WithMany()
                         .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.Worker", "Worker")
-                        .WithMany("Requests")
+                        .WithMany()
                         .HasForeignKey("WorkerId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -675,7 +674,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.Navigation("Worker");
                 });
 
-            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Service", b =>
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Services", b =>
                 {
                     b.HasOne("ApartmentFinishingServices.Core.Entities.Category", "Category")
                         .WithMany("Services")
@@ -688,7 +687,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.AppRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<int>", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -715,7 +714,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
                 {
-                    b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.AppRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<int>", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -749,8 +748,6 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.Customer", b =>
                 {
-                    b.Navigation("Requests");
-
                     b.Navigation("Reviews");
 
                     b.Navigation("SavedWorkers");
@@ -762,8 +759,6 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
                     b.Navigation("PortfolioItems");
 
-                    b.Navigation("Requests");
-
                     b.Navigation("Reviews");
 
                     b.Navigation("SavedWorkers");
@@ -774,10 +769,8 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.Navigation("PortfolioImages");
                 });
 
-            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Service", b =>
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Services", b =>
                 {
-                    b.Navigation("Requests");
-
                     b.Navigation("Workers");
                 });
 #pragma warning restore 612, 618

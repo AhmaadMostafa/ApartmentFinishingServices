@@ -2,10 +2,14 @@
 using ApartmentFinishingServices.APIs.Helpers;
 using ApartmentFinishingServices.Core.Entities;
 using ApartmentFinishingServices.Core.Repository.Contract;
+using ApartmentFinishingServices.Core.Services.Contract;
 using ApartmentFinishingServices.Core.Specifications.Category_Specs;
+using ApartmentFinishingServices.Core.Specifications.Service_specs;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ApartmentFinishingServices.APIs.Controllers
 {
@@ -13,32 +17,46 @@ namespace ApartmentFinishingServices.APIs.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly IGenricRepository<Category> _categoryRepo;
+        private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
 
-        public CategoriesController(IGenricRepository<Category> categoryRepo , IMapper mapper)
+        public CategoriesController(ICategoryService categoryService, IMapper mapper)
         {
-            _categoryRepo = categoryRepo;
+            _categoryService = categoryService;
             _mapper = mapper;
         }
         [HttpGet]
-        public async Task<ActionResult<Pagination<CategoryToReturnDto>>> GetCategory([FromQuery] CategorySpecParams specParams)
+        public async Task<ActionResult<Pagination<CategoryToReturnDto>>> GetCategories([FromQuery] CategorySpecParams specParams)
         {
-            var spec = new CategoryWithIncludesSpecifications(specParams);
-            var categories = await _categoryRepo.GetAllWithSpec(spec);
+            var categories = await _categoryService.GetCategoriesAsync(specParams);
             var data = _mapper.Map<IReadOnlyList<Category>, IReadOnlyList<CategoryToReturnDto>>(categories);
-            var countSpec = new CategoryForCountSpecification(specParams);
-            var count = await _categoryRepo.GetCount(countSpec);
+            var count = await _categoryService.GetCategoryCountAsync(specParams);
             return Ok(new Pagination<CategoryToReturnDto>(specParams.PageIndex, specParams.PageSize, count, data));
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryToReturnDto>> GetProduct(int id)
+        public async Task<ActionResult<CategoryToReturnDto>> GetCategory(int id)
         {
-            var spec = new CategoryWithIncludesSpecifications(id);
-            var category = await _categoryRepo.GetByIdWithSpec(spec);
+            var category = await _categoryService.GetCategoryAsync(id);
             if (category == null)
                 return NotFound();
             return Ok(_mapper.Map<Category, CategoryToReturnDto>(category));
+        }
+        [HttpGet("services")]
+        [Authorize(Roles = "Customer")]
+        public async Task<ActionResult<Pagination<ServiceDto>>> GetServices([FromQuery] ServiceSpecParams specParams)
+        {
+            var services = await _categoryService.GetServicesAsync(specParams);
+            var data = _mapper.Map<IReadOnlyList<Services>, IReadOnlyList<ServiceDto>>(services);
+            var count = await _categoryService.GetServiceCountAsync(specParams);
+            return Ok(new Pagination<ServiceDto>(specParams.PageIndex, specParams.PageSize, count, data));
+        }
+        [HttpGet("services/{id}")]
+        public async Task<ActionResult<ServiceDto>> GetService(int id)
+        {
+            var service = await _categoryService.GetServiceAsync(id);
+            if (service == null)
+                return NotFound();
+            return Ok(_mapper.Map<Services, ServiceDto>(service));
         }
 
 

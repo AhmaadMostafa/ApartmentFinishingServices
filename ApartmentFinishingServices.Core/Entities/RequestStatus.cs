@@ -13,6 +13,8 @@ namespace ApartmentFinishingServices.Core.Entities
         Pending,
         [EnumMember(Value = "Accepted")]
         Accepted,
+        [EnumMember(Value = "Rejected")]
+        Rejected,
         [EnumMember(Value = "In Progress")]
         InProgress,
         [EnumMember(Value = "Completed")]

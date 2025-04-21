@@ -14,20 +14,20 @@ namespace ApartmentFinishingServices.Repository.Data.Config
     {
         public void Configure(EntityTypeBuilder<Request> builder)
         {
-            builder.HasOne(p => p.Worker)
-                .WithMany(r => r.Requests)
-                .HasForeignKey(r => r.WorkerId)
-                .OnDelete(DeleteBehavior.NoAction);
+            //builder.HasOne(p => p.Worker)
+            //    .WithMany(r => r.Requests)
+            //    .HasForeignKey(r => r.WorkerId)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne(p => p.Service)
-                .WithMany(r => r.Requests)
-                .HasForeignKey(s => s.ServiceId)
-                .OnDelete(DeleteBehavior.NoAction);
+            //builder.HasOne(p => p.Service)
+            //    .WithMany(r => r.Requests)
+            //    .HasForeignKey(s => s.ServiceId)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne(r => r.Customer)
-                .WithMany(r => r.Requests)
-                .HasForeignKey(r => r.CustomerId)
-                .OnDelete(DeleteBehavior.NoAction);
+            //builder.HasOne(r => r.Customer)
+            //    .WithMany(r => r.Requests)
+            //    .HasForeignKey(r => r.CustomerId)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             builder.Property(c => c.Comment).HasMaxLength(200);
 

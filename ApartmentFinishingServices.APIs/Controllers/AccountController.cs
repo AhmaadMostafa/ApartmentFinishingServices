@@ -95,6 +95,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
             if (user is null)
                 return Unauthorized();
             var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password, false);
+            var cityExist = await _cityRepo.GetById(user.CityId);
             if (result.Succeeded is false)
                 return Unauthorized();
             return Ok(new CustomerToReturnDto()
@@ -103,6 +104,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
+                CityName = cityExist?.Name,
                 Age = user.Age,
                 ProfilePictureUrl = user.ProfilePictureUrl,
                 Token = await _authService.CreateTokenAsync(user, _userManager)

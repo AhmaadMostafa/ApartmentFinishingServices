@@ -31,10 +31,10 @@ namespace ApartmentFinishingServices.Repository.Data.Config
                 .HasForeignKey(p => p.WorkerId)
                 .OnDelete(DeleteBehavior.Cascade); // Delete portfolio items when worker is deleted
 
-            builder.HasMany(w => w.Requests)
-                .WithOne(r => r.Worker)
-                .HasForeignKey(r => r.WorkerId)
-                .OnDelete(DeleteBehavior.Restrict); // Prevent deletion if requests exist
+            //builder.HasMany(w => w.Requests)
+            //    .WithOne(r => r.Worker)
+            //    .HasForeignKey(r => r.WorkerId)
+            //    .OnDelete(DeleteBehavior.Restrict); // Prevent deletion if requests exist
 
             builder.Property(w => w.Description)
                 .HasMaxLength(500);
