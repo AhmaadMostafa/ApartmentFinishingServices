@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApartmentFinishingServices.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d3bca639ae1d6c600f5724db2c5bfda76e526f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9222646c2bd0f0337af2692f692e9af159c2824")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApartmentFinishingServices.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApartmentFinishingServices.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

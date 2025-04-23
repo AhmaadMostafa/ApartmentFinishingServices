@@ -115,6 +115,25 @@ namespace ApartmentFinishingServices.Service
             await _unitOfWork.CompleteAsync();
             return request;
         }
+
+        public async Task<Request> MarkServiceAsCompletedAsync(int requestId , int appUserId)
+        {
+            var workerSpec = new WorkerByAppUserIdSpecification(appUserId);
+            var worker = await _unitOfWork.Repository<Worker>().GetByIdWithSpec(workerSpec);
+
+            var spec = new RequestByIdAndWorkerIdSpecification(requestId, worker.Id);
+            var request = await _unitOfWork.Repository<Request>().GetByIdWithSpec(spec);
+
+            if (request.Status != RequestStatus.Accepted)
+                return null;
+
+            request.Status = RequestStatus.Completed;
+            _unitOfWork.Repository<Request>().Update(request);
+
+            await _unitOfWork.CompleteAsync();
+            return request;
+        }
+
         public async Task<IReadOnlyList<Request>> GetCustomerRequestsAsync(int appUserId)
         {
             var customerSpec = new CustomerByAppUserIdSpecification(appUserId);
@@ -132,6 +151,7 @@ namespace ApartmentFinishingServices.Service
             var requests = await _unitOfWork.Repository<Request>().GetAllWithSpec(spec);
             return requests;
         }
+
 
 
 

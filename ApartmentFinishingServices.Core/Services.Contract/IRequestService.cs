@@ -14,6 +14,7 @@ namespace ApartmentFinishingServices.Core.Services.Contract
         Task<Request> RejectRequestAsync(int requestId, int workerId);
         Task<Request> CounterOfferAsync(int requestId, int workerId, decimal price);
         Task<Request> CustomerRespondToOfferAsync(int requestId, int customerId, bool accept, decimal? newOffer = null);
+        Task<Request> MarkServiceAsCompletedAsync(int requestId, int appUserId);
         Task<IReadOnlyList<Request>> GetCustomerRequestsAsync(int customerId);
         Task<IReadOnlyList<Request>> GetWorkerRequestsAsync(int workerId);
     }
