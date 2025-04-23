@@ -12,7 +12,6 @@ namespace ApartmentFinishingServices.APIs.Dtos
         [Required]
         public string Password { get; set; }
         [Required]
-        [Compare("Password")]
         public string ConfirmPassword { get; set; }
         [Required]
         [Phone]

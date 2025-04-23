@@ -1,4 +1,5 @@
 ﻿using ApartmentFinishingServices.APIs.Dtos;
+using ApartmentFinishingServices.APIs.Errors;
 using ApartmentFinishingServices.APIs.Helpers;
 using ApartmentFinishingServices.Core.Entities;
 using ApartmentFinishingServices.Core.Repository.Contract;
@@ -26,6 +27,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
             _mapper = mapper;
         }
         [HttpGet]
+        //[Authorize(Roles = "Customer")]
         public async Task<ActionResult<Pagination<CategoryToReturnDto>>> GetCategories([FromQuery] CategorySpecParams specParams)
         {
             var categories = await _categoryService.GetCategoriesAsync(specParams);
@@ -34,11 +36,13 @@ namespace ApartmentFinishingServices.APIs.Controllers
             return Ok(new Pagination<CategoryToReturnDto>(specParams.PageIndex, specParams.PageSize, count, data));
         }
         [HttpGet("{id}")]
+        //[Authorize(Roles = "Customer")]
+
         public async Task<ActionResult<CategoryToReturnDto>> GetCategory(int id)
         {
             var category = await _categoryService.GetCategoryAsync(id);
             if (category == null)
-                return NotFound();
+                return NotFound(new ApiResponse(404));
             return Ok(_mapper.Map<Category, CategoryToReturnDto>(category));
         }
         [HttpGet("services")]
@@ -55,7 +59,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
         {
             var service = await _categoryService.GetServiceAsync(id);
             if (service == null)
-                return NotFound();
+                return NotFound(new ApiResponse(404));
             return Ok(_mapper.Map<Services, ServiceDto>(service));
         }
 

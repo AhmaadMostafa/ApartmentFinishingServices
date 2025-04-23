@@ -15,6 +15,9 @@ using System.Text;
 using ApartmentFinishingServices.APIs.Extenstions;
 using ApartmentFinishingServices.Repository.Identity.IdentitySeed;
 using ApartmentFinishingServices.Core;
+using Microsoft.AspNetCore.Mvc;
+using ApartmentFinishingServices.APIs.Errors;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApartmentFinishingServices.APIs
 {
@@ -36,13 +39,28 @@ namespace ApartmentFinishingServices.APIs
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
             builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
-            builder.Services.AddScoped(typeof(ICurrentUserService), typeof(CurrentUserService));
             builder.Services.AddScoped(typeof(IRequestService), typeof(RequestService));
+            builder.Services.AddScoped(typeof(IReviewService), typeof(ReviewService));
             builder.Services.AddScoped(typeof(IGenricRepository<>), typeof(GenricRepository<>));
             builder.Services.AddScoped(typeof(ICategoryService), typeof(CategoryService));
-            builder.Services.AddHttpContextAccessor();
+
 
             builder.Services.AddAutoMapper(typeof(MappingProfiles));
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = (actionContext) =>
+                {
+                    var errors = actionContext.ModelState.Where(p => p.Value.Errors.Count() > 0)
+                                                         .SelectMany(p => p.Value.Errors)
+                                                         .Select(err => err.ErrorMessage).ToArray();
+                    var validationErrorResponse = new ApiValidationErrorResponse()
+                    {
+                        Errors = errors
+                    };
+                    return new BadRequestObjectResult(validationErrorResponse);
+                };
+            });
+
             builder.Services.AddIdentityServices(builder.Configuration);
 
             builder.Services.AddCors(options =>
@@ -52,6 +70,7 @@ namespace ApartmentFinishingServices.APIs
                                     .AllowAnyMethod()
                                     .AllowAnyHeader());
             });
+
 
             var app = builder.Build();
             app.UseCors("AllowReactApp");

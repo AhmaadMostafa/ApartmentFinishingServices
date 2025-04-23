@@ -1,4 +1,5 @@
 ﻿using ApartmentFinishingServices.APIs.Dtos;
+using ApartmentFinishingServices.APIs.Errors;
 using ApartmentFinishingServices.Core.Entities;
 using ApartmentFinishingServices.Core.Entities.Identity;
 using ApartmentFinishingServices.Core.Repository.Contract;
@@ -43,12 +44,14 @@ namespace ApartmentFinishingServices.APIs.Controllers
         private async Task<ActionResult<AppUser>> RegisterUser(RegisterBaseDto model)
         {
             if (CheckEmailExists(model.Email).Result.Value)
-                return BadRequest(new { Error = "Email is already taken" });
+                return BadRequest(new ApiValidationErrorResponse() { Errors = new[] { "This email is already exist!!" } });
+
             if (model.Password != model.ConfirmPassword)
-                return BadRequest(new { Error = "Password do not match" });
+                return BadRequest(new ApiValidationErrorResponse() { Errors = new[] { "Password do not match" } });
+
             var cityExist = await _cityRepo.GetById(model.CityId);
             if (cityExist is null)
-                return BadRequest();
+                return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "Invalid city" } });
             var user = new AppUser()
             {
                 Name = model.Name,
@@ -63,7 +66,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded is false)
             {
-                return BadRequest(new { Error = "Failed to create user", Errors = result.Errors.Select(e => e.Description) });
+                return BadRequest(new ApiResponse(400));
             }
             return user;
         }
@@ -72,6 +75,8 @@ namespace ApartmentFinishingServices.APIs.Controllers
         public async Task<ActionResult<CustomerToReturnDto>> RegisterAsCustomer(RegisterAsCustomerDto model)
         {
             var registrationResult = await RegisterUser(model);
+            if (registrationResult.Result is BadRequestObjectResult badRequest)
+                return BadRequest(badRequest.Value);
             var user = registrationResult.Value;
             var customer = new Customer{ AppUserId = user.Id};
             await _customerRepo.Add(customer);
@@ -93,11 +98,11 @@ namespace ApartmentFinishingServices.APIs.Controllers
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user is null)
-                return Unauthorized();
+                return Unauthorized(new ApiResponse(401));
             var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password, false);
             var cityExist = await _cityRepo.GetById(user.CityId);
             if (result.Succeeded is false)
-                return Unauthorized();
+                return Unauthorized(new ApiResponse(401));
             return Ok(new CustomerToReturnDto()
             {
                 DisplayName = user.Name,
@@ -119,8 +124,15 @@ namespace ApartmentFinishingServices.APIs.Controllers
         public async Task<ActionResult<WorkerToReturnDto>>RegisterAsWorker(RegisterAsWorkerDto model)
         {
             var registrationResult = await RegisterUser(model);
+            if (registrationResult.Result is BadRequestObjectResult badRequest)
+                return BadRequest(badRequest.Value);
+
             var user = registrationResult.Value;
             var serviceExist = await _serviceRepo.GetById(model.ServiceId);
+
+            if (serviceExist is null)
+                return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "Invalid service" } });
+
             var worker = new Worker()
             {
                 Description = string.IsNullOrEmpty(model.Description) ? "New Worker" : model.Description,

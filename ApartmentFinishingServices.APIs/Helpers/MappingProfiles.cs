@@ -31,7 +31,11 @@ namespace ApartmentFinishingServices.APIs.Helpers
                 .ForMember(d => d.ServiceName, o => o.MapFrom(s => s.Service.Name ?? "Unknown Service"))
                 .ForMember(d => d.Status, o => o.MapFrom(s => s.Status.ToString()))
                 .ForMember(d => d.NegotiationStatus, o => o.MapFrom(s => s.NegotiationStatus.ToString()));
-                
+
+            CreateMap<Review, ReviewToReturnDto>()
+                .ForMember(d => d.WorkerName, o => o.MapFrom(s => s.Worker != null ? s.Worker.AppUser.Name : "Unknown"))
+                .ForMember(d => d.CustomerName, o => o.MapFrom(s => s.Customer != null ? s.Customer.AppUser.Name : "Unknown"));
+
 
         }
     }
