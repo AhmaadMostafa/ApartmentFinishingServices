@@ -17,8 +17,8 @@ namespace ApartmentFinishingServices.Core.Specifications.Request_specs
         }
         private void AddIncludes()
         {
-            AddInclude(q => q.Include(p => p.Worker).Include(p => p.Worker.AppUser).Include(p => p.Customer)
-            .Include(p => p.Customer.AppUser).Include(p => p.Service));
+            AddInclude(q => q.Include(p => p.Worker).ThenInclude(p => p.AppUser).Include(p => p.Customer)
+            .ThenInclude(p => p.AppUser).ThenInclude(p => p.City).Include(p => p.Service));
         }
     }
 }

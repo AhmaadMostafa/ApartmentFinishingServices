@@ -19,7 +19,8 @@ namespace ApartmentFinishingServices.APIs.Dtos
         [Required]
         public int CityId { get; set; }
         public int? Age { get; set; }
-        public string? ProfilePictureUrl { get; set; }
+        //public string? ProfilePictureUrl { get; set; }
+        public IFormFile? ProfilePicture { get; set; } 
         public string? Address { get; set; }
     }
 }

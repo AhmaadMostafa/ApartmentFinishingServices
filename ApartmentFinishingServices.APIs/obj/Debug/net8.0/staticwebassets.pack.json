@@ -1,36 +1,44 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\1.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\1.png",
       "PackagePath": "staticwebassets\\images\\categories\\1.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\2.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\2.png",
       "PackagePath": "staticwebassets\\images\\categories\\2.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\3.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\3.png",
       "PackagePath": "staticwebassets\\images\\categories\\3.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\electricians.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\electricians.png",
       "PackagePath": "staticwebassets\\images\\categories\\electricians.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\house-cleaning.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\house-cleaning.png",
       "PackagePath": "staticwebassets\\images\\categories\\house-cleaning.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\lawn-care.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\lawn-care.png",
       "PackagePath": "staticwebassets\\images\\categories\\lawn-care.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\painting.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\painting.png",
       "PackagePath": "staticwebassets\\images\\categories\\painting.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\plumbing.png",
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\plumbing.png",
       "PackagePath": "staticwebassets\\images\\categories\\plumbing.png"
+    },
+    {
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\profiles\\de33fbb2-b748-46e7-81e4-d6df0d35d659_WhatsApp Image 2024-09-03 at 19.17.03_daf99d04.jpg",
+      "PackagePath": "staticwebassets\\images\\profiles\\de33fbb2-b748-46e7-81e4-d6df0d35d659_WhatsApp Image 2024-09-03 at 19.17.03_daf99d04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\profiles\\f8f1ad9e-bc0a-4bf5-9c68-fae160623fcb_image.jpg",
+      "PackagePath": "staticwebassets\\images\\profiles\\f8f1ad9e-bc0a-4bf5-9c68-fae160623fcb_image.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ApartmentFinishingServices.APIs.Microsoft.AspNetCore.StaticWebAssets.props",

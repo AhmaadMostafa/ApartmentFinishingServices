@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CnbZKq+C8PdMMhxMD+Hi0yVt6GMSu3lSO7Zak+NrSjo=",
+  "Hash": "61Zx5XAtarv/yKsmNopSr53qELPosYIcfVGWwg29vIc=",
   "Source": "ApartmentFinishingServices.APIs",
   "BasePath": "_content/ApartmentFinishingServices.APIs",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ApartmentFinishingServices.APIs\\wwwroot",
       "Source": "ApartmentFinishingServices.APIs",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\1.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\1.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/1.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\1.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\2.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\2.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/2.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\2.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\3.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\3.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/3.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\3.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\electricians.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\electricians.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/electricians.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\electricians.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\house-cleaning.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\house-cleaning.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/house-cleaning.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\house-cleaning.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\lawn-care.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\lawn-care.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/lawn-care.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\lawn-care.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\painting.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\painting.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/painting.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\painting.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\plumbing.png",
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\categories\\plumbing.png",
       "SourceId": "ApartmentFinishingServices.APIs",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
       "BasePath": "_content/ApartmentFinishingServices.APIs",
       "RelativePath": "images/categories/plumbing.png",
       "AssetKind": "All",
@@ -167,6 +167,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\categories\\plumbing.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\profiles\\de33fbb2-b748-46e7-81e4-d6df0d35d659_WhatsApp Image 2024-09-03 at 19.17.03_daf99d04.jpg",
+      "SourceId": "ApartmentFinishingServices.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "BasePath": "_content/ApartmentFinishingServices.APIs",
+      "RelativePath": "images/profiles/de33fbb2-b748-46e7-81e4-d6df0d35d659_WhatsApp Image 2024-09-03 at 19.17.03_daf99d04.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profiles\\de33fbb2-b748-46e7-81e4-d6df0d35d659_WhatsApp Image 2024-09-03 at 19.17.03_daf99d04.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\images\\profiles\\f8f1ad9e-bc0a-4bf5-9c68-fae160623fcb_image.jpg",
+      "SourceId": "ApartmentFinishingServices.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\wwwroot\\",
+      "BasePath": "_content/ApartmentFinishingServices.APIs",
+      "RelativePath": "images/profiles/f8f1ad9e-bc0a-4bf5-9c68-fae160623fcb_image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profiles\\f8f1ad9e-bc0a-4bf5-9c68-fae160623fcb_image.jpg"
     }
   ]
 }

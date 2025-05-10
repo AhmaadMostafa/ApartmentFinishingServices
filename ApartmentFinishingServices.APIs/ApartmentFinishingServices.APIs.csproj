@@ -20,4 +20,8 @@
     <ProjectReference Include="..\ApartmentFinishingServices.Service\ApartmentFinishingServices.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Users\" />
+  </ItemGroup>
+
 </Project>

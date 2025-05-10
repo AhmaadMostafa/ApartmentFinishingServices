@@ -18,6 +18,7 @@ using ApartmentFinishingServices.Core;
 using Microsoft.AspNetCore.Mvc;
 using ApartmentFinishingServices.APIs.Errors;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.FileProviders;
 
 namespace ApartmentFinishingServices.APIs
 {
@@ -38,6 +39,8 @@ namespace ApartmentFinishingServices.APIs
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            builder.Services.AddScoped(typeof(IFileService), typeof(FileService));
+            builder.Services.AddScoped(typeof(IAdminService), typeof(AdminService));
             builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             builder.Services.AddScoped(typeof(IRequestService), typeof(RequestService));
             builder.Services.AddScoped(typeof(IReviewService), typeof(ReviewService));
@@ -88,6 +91,8 @@ namespace ApartmentFinishingServices.APIs
                 await StoreContextSeed.SeedAsync(_dbcontext);
                 var _roleManager = services.GetRequiredService<RoleManager<IdentityRole<int>>>();
                 var _userManager = services.GetRequiredService<UserManager<AppUser>>();
+                var _unitOfWork = services.GetRequiredService<IUnitOfWork>();
+                await IdentitySeed.SeedAdminUserAsync(_userManager , _unitOfWork);
                 await IdentitySeed.SeedRolesAsync(_roleManager);
             }
             catch (Exception ex)
@@ -106,6 +111,13 @@ namespace ApartmentFinishingServices.APIs
             app.UseHttpsRedirection();
 
             app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath
+                , "uploads")),
+                RequestPath = "/resources"
+            });
 
             app.UseAuthentication();
 

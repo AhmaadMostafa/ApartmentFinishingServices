@@ -11,6 +11,7 @@ namespace ApartmentFinishingServices.Core.Entities.Identity
         //public ICollection<Request>? Requests { get; set; } = new HashSet<Request>();
         public ICollection<Review>? Reviews { get; set; } = new HashSet<Review>();
         public ICollection<SavedWorker>? SavedWorkers { get; set; } = new HashSet<SavedWorker>();
+        public int? RequestsCount { get; set; } = 0;
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }
     }

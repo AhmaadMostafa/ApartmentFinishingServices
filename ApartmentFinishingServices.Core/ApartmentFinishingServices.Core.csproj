@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />
+    <Compile Remove="Entities\Order Aggregate\**" />
+    <EmbeddedResource Remove="Entities\Order Aggregate\**" />
+    <None Remove="Entities\Order Aggregate\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Order Aggregate\" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />
   </ItemGroup>
 
 </Project>

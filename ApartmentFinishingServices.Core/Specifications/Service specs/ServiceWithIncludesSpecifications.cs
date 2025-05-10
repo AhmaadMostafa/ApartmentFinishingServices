@@ -30,6 +30,7 @@ namespace ApartmentFinishingServices.Core.Specifications.Service_specs
         private void AddIncludes()
         {
             AddInclude(q => q.Include(p => p.Workers).ThenInclude(p => p.AppUser).ThenInclude(u => u.City));
+
         }
     }
 }

@@ -11,3 +11,16 @@ C:\Users\Ahmad\Desktop\Apartment Finishing Services API\ApartmentFinishingServic
 C:\Users\Ahmad\Desktop\Apartment Finishing Services API\ApartmentFinishingServices.Core\obj\Debug\net8.0\refint\ApartmentFinishingServices.Core.dll
 C:\Users\Ahmad\Desktop\Apartment Finishing Services API\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.pdb
 C:\Users\Ahmad\Desktop\Apartment Finishing Services API\ApartmentFinishingServices.Core\obj\Debug\net8.0\ref\ApartmentFinishingServices.Core.dll
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.csproj.AssemblyReference.cache
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.AssemblyInfoInputs.cache
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.AssemblyInfo.cs
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.csproj.CoreCompileInputs.cache
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.sourcelink.json
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\bin\Debug\net8.0\ApartmentFinishingServices.Core.deps.json
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\bin\Debug\net8.0\ApartmentFinishingServices.Core.dll
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\bin\Debug\net8.0\ApartmentFinishingServices.Core.pdb
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.dll
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\refint\ApartmentFinishingServices.Core.dll
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ApartmentFinishingServices.Core.pdb
+C:\Users\Ahmad\Downloads\ApartmentFinishingServices-main\ApartmentFinishingServices-main\ApartmentFinishingServices.Core\obj\Debug\net8.0\ref\ApartmentFinishingServices.Core.dll

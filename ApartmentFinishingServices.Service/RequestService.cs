@@ -37,6 +37,7 @@ namespace ApartmentFinishingServices.Service
                                                           PriceNegotiationStatus.CustomerOffer : 
                                                           PriceNegotiationStatus.Pending                    
             };
+            customer.RequestsCount += 1;
 
             await _unitOfWork.Repository<Request>().Add(request);
             await _unitOfWork.CompleteAsync();
@@ -124,13 +125,32 @@ namespace ApartmentFinishingServices.Service
             var spec = new RequestByIdAndWorkerIdSpecification(requestId, worker.Id);
             var request = await _unitOfWork.Repository<Request>().GetByIdWithSpec(spec);
 
+            var adminList = await _unitOfWork.Repository<Admin>().GetAll();
+            var admin = adminList.FirstOrDefault();
+
             if (request.Status != RequestStatus.Accepted)
                 return null;
 
             request.Status = RequestStatus.Completed;
+            worker.CompletedRequests += 1;
+
+            decimal? requestAmount = request.FinalAgreedPrice;
+            decimal? workerEarnings = requestAmount * 0.7m;
+
+            worker.TotalEarnings = (worker.TotalEarnings ?? 0) + workerEarnings;
+
+            decimal? adminEarnings = requestAmount - workerEarnings;
+
+            admin.TotalEarnings = (admin.TotalEarnings ?? 0) + adminEarnings;
+
+            _unitOfWork.Repository<Admin>().Update(admin);
+
+            _unitOfWork.Repository<Worker>().Update(worker);
+
             _unitOfWork.Repository<Request>().Update(request);
 
             await _unitOfWork.CompleteAsync();
+
             return request;
         }
 

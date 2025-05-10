@@ -1,14 +1,17 @@
 ﻿using ApartmentFinishingServices.APIs.Dtos;
 using ApartmentFinishingServices.APIs.Errors;
+using ApartmentFinishingServices.APIs.Extenstions;
 using ApartmentFinishingServices.Core.Entities;
 using ApartmentFinishingServices.Core.Entities.Identity;
 using ApartmentFinishingServices.Core.Repository.Contract;
 using ApartmentFinishingServices.Core.Services.Contract;
 using ApartmentFinishingServices.Service;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ApartmentFinishingServices.APIs.Controllers
 {
@@ -25,11 +28,15 @@ namespace ApartmentFinishingServices.APIs.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IAuthService _authService;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _environment;
+        private readonly IFileService _fileService;
+        private readonly string[] _allowedProfilePictureExtensions = new[] { ".jpg", ".jpeg", ".png" };
+
 
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
             IAuthService authService , IGenricRepository<Customer> customerRepo , IGenricRepository<City> cityRepo
             , IGenricRepository<Worker> workerRepo , IGenricRepository<Services> serviceRepo, IMapper mapper
-            , IGenricRepository<AvailableDay> availableDayRepo)
+            , IGenricRepository<AvailableDay> availableDayRepo , IWebHostEnvironment environment , IFileService fileService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -37,6 +44,8 @@ namespace ApartmentFinishingServices.APIs.Controllers
             _cityRepo = cityRepo;
             _serviceRepo = serviceRepo;
             _availableDayRepo = availableDayRepo;
+            _environment = environment;
+            _fileService = fileService;
             _customerRepo = customerRepo;
             _workerRepo = workerRepo;
             _mapper = mapper;
@@ -52,6 +61,25 @@ namespace ApartmentFinishingServices.APIs.Controllers
             var cityExist = await _cityRepo.GetById(model.CityId);
             if (cityExist is null)
                 return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "Invalid city" } });
+
+            string profilePictureUrl = null;
+
+            if (model.ProfilePicture != null)
+            {
+                try
+                {
+                    var fileName = await _fileService.SaveFileAsync(model.ProfilePicture, _allowedProfilePictureExtensions);
+                    profilePictureUrl = $"https://localhost:7118/resources/{fileName}";
+                }
+                catch (ArgumentException ex)
+                {
+                    return BadRequest(new ApiValidationErrorResponse { Errors = new[] { ex.Message } });
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "Error uploading profile picture" } });
+                }
+            }
             var user = new AppUser()
             {
                 Name = model.Name,
@@ -61,7 +89,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
                 Address = model.Address,
                 CityId = model.CityId,
                 Age = model.Age,
-                ProfilePictureUrl = model.ProfilePictureUrl,
+                ProfilePictureUrl = profilePictureUrl,
             };
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded is false)
@@ -187,6 +215,99 @@ namespace ApartmentFinishingServices.APIs.Controllers
 
         }
 
+        [HttpDelete("delete-profile-picture")]
+        [Authorize]
+        public async Task<ActionResult> DeleteProfilePicture()
+        {
+            var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
+            if (user == null)
+            {
+                return NotFound(new ApiResponse(404, "User not found"));
+            }
+
+            if (string.IsNullOrEmpty(user.ProfilePictureUrl))
+            {
+                return BadRequest(new ApiResponse(400, "User doesn't have a profile picture"));
+            }
+            try
+            {
+                var fileName = Path.GetFileName(user.ProfilePictureUrl);
+
+                _fileService.DeleteFile(fileName);
+
+                user.ProfilePictureUrl = null;
+                var result = await _userManager.UpdateAsync(user);
+
+                if (!result.Succeeded)
+                {
+                    return BadRequest(new ApiResponse(400, "Failed to update user profile"));
+                }
+
+                return Ok(new ApiResponse(200, "Profile picture deleted successfully"));
+            }
+            catch (FileNotFoundException)
+            {
+                user.ProfilePictureUrl = null;
+                await _userManager.UpdateAsync(user);
+                return BadRequest(new ApiResponse(400, "Profile picture file not found (URL cleared)"));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponse(400, $"Error deleting profile picture: {ex.Message}"));
+            }
+        }
+        [HttpPut("update-profile-picture")]
+        [Authorize]
+        public async Task<ActionResult<string>> UpdateProfilePicture([FromForm] IFormFile newProfilePicture)
+        {
+            if (newProfilePicture == null || newProfilePicture.Length == 0)
+            {
+                return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "No file was uploaded." } });
+            }
+
+            var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
+            if (user == null)
+            {
+                return NotFound(new ApiResponse(404, "User not found"));
+            }
+
+            try
+            {
+                // Delete old picture if exists
+                if (!string.IsNullOrEmpty(user.ProfilePictureUrl))
+                {
+                    var oldFileName = Path.GetFileName(user.ProfilePictureUrl);
+                    try
+                    {
+                        _fileService.DeleteFile(oldFileName);
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        // Old file not found - proceed anyway
+                    }
+                }
+
+                // Save new picture
+                var fileName = await _fileService.SaveFileAsync(newProfilePicture, _allowedProfilePictureExtensions);
+                user.ProfilePictureUrl = $"https://localhost:7118/resources/{fileName}";
+
+                var result = await _userManager.UpdateAsync(user);
+                if (!result.Succeeded)
+                {
+                    return BadRequest(new ApiResponse(400, "Failed to update user profile"));
+                }
+
+                return Ok(user.ProfilePictureUrl);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new ApiValidationErrorResponse { Errors = new[] { ex.Message } });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponse(400, $"Error updating profile picture: {ex.Message}"));
+            }
+        }
 
     }
 }

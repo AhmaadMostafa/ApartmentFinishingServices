@@ -45,16 +45,6 @@ namespace ApartmentFinishingServices.APIs.Controllers
             return Ok(_mapper.Map<Review, ReviewToReturnDto>(review));
         }
 
-        //[HttpGet("worker")]
-        //[Authorize(Roles = "Worker")]
-        //public async Task<ActionResult<IReadOnlyList<ReviewToReturnDto>>> GetWorkerReviews()
-        //{
-        //    var appUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-
-        //    var reviews = await _reviewService.GetWorkerReviewsAsync(appUserId);
-        //    return Ok(_mapper.Map<IReadOnlyList<Review>, IReadOnlyList<ReviewToReturnDto>>(reviews));
-        //}
-
         [HttpGet("worker/{workerId}")]
         public async Task<ActionResult<IReadOnlyList<ReviewToReturnDto>>> GetWorkerReviews(int workerId)
         {

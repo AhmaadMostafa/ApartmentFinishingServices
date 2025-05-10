@@ -32,7 +32,7 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                 column: "WorkerId",
                 principalTable: "Workers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Restrict);
         }
 
         /// <inheritdoc />

@@ -15,5 +15,6 @@ namespace ApartmentFinishingServices.Core.Entities.Identity
         public string? ProfilePictureUrl { get; set; }
         public int CityId { get; set; }
         public City City { get; set; }
+        public bool IsBlocked { get; set; } = false;
     }
 }

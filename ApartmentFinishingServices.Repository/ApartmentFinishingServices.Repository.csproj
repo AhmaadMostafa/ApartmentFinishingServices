@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Identity\Migrations\**" />
+    <EmbeddedResource Remove="Identity\Migrations\**" />
+    <None Remove="Identity\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Identity\Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

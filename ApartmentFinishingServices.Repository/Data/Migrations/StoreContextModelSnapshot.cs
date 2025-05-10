@@ -87,6 +87,27 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.Admin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("TotalEarnings")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.AppUser", b =>
                 {
                     b.Property<int>("Id")
@@ -116,6 +137,9 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsBlocked")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
@@ -183,6 +207,9 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("RequestsCount")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId")
@@ -202,6 +229,9 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("CompletedRequests")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
@@ -217,6 +247,9 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
                     b.Property<int?>("ServiceId")
                         .HasColumnType("int");
+
+                    b.Property<decimal?>("TotalEarnings")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -545,6 +578,17 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Worker");
+                });
+
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.Admin", b =>
+                {
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.AppUser", b =>

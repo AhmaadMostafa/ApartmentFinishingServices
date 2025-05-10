@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj": {}
+    "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj": {
+    "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj",
         "projectName": "ApartmentFinishingServices.Core",
-        "projectPath": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj",
+        "projectPath": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj",
         "packagesPath": "C:\\Users\\Ahmad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmad\\Desktop\\Apartment Finishing Services API\\ApartmentFinishingServices.Core\\obj\\",
+        "outputPath": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.7, )"

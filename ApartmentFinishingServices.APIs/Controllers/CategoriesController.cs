@@ -46,7 +46,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
             return Ok(_mapper.Map<Category, CategoryToReturnDto>(category));
         }
         [HttpGet("services")]
-        [Authorize(Roles = "Customer")]
+        //[Authorize(Roles = "Customer")]
         public async Task<ActionResult<Pagination<ServiceDto>>> GetServices([FromQuery] ServiceSpecParams specParams)
         {
             var services = await _categoryService.GetServicesAsync(specParams);
