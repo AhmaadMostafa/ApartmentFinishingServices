@@ -5,6 +5,7 @@
         public int RequestId { get; set; }
         public int WorkerId { get; set; }
         public string WorkerName { get; set; }
+        public int CustomerId { get; set; }
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }
         public string CustomerCity { get; set; }

@@ -29,6 +29,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj": {
+                "projectPath": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj"
+              },
               "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Repository\\ApartmentFinishingServices.Repository.csproj": {
                 "projectPath": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Repository\\ApartmentFinishingServices.Repository.csproj"
               },
@@ -56,6 +59,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNet.SignalR": {
+              "target": "Package",
+              "version": "[2.4.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

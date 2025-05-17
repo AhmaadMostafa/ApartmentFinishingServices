@@ -45,6 +45,10 @@ namespace ApartmentFinishingServices.Repository
         {
             return SpecificationsEvaluator<T>.GetQuery(_dbContext.Set<T>() , spec);
         }
+        public async Task<int> GetCount()
+        {
+            return await _dbContext.Set<T>().CountAsync();
+        }
 
         public async Task<int> GetCount(ISpecification<T> spec)
         {

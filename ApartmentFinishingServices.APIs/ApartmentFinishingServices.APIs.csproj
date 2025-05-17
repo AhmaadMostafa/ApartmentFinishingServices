@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApartmentFinishingServices.Core\ApartmentFinishingServices.Core.csproj" />
     <ProjectReference Include="..\ApartmentFinishingServices.Repository\ApartmentFinishingServices.Repository.csproj" />
     <ProjectReference Include="..\ApartmentFinishingServices.Service\ApartmentFinishingServices.Service.csproj" />
   </ItemGroup>

@@ -19,6 +19,8 @@ using Microsoft.AspNetCore.Mvc;
 using ApartmentFinishingServices.APIs.Errors;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.FileProviders;
+using ApartmentFinishingServices.APIs.Hubs;
+using Microsoft.AspNetCore.Http.Connections;
 
 namespace ApartmentFinishingServices.APIs
 {
@@ -46,6 +48,15 @@ namespace ApartmentFinishingServices.APIs
             builder.Services.AddScoped(typeof(IReviewService), typeof(ReviewService));
             builder.Services.AddScoped(typeof(IGenricRepository<>), typeof(GenricRepository<>));
             builder.Services.AddScoped(typeof(ICategoryService), typeof(CategoryService));
+            builder.Services.AddScoped<IChatService, ChatService>();
+
+
+            builder.Services.AddSignalR(options => {
+                options.EnableDetailedErrors = true;
+                options.ClientTimeoutInterval = TimeSpan.FromSeconds(30);
+                options.KeepAliveInterval = TimeSpan.FromSeconds(15);
+            });
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
             builder.Services.AddAutoMapper(typeof(MappingProfiles));
@@ -69,16 +80,19 @@ namespace ApartmentFinishingServices.APIs
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowReactApp",
-                    policy => policy.AllowAnyOrigin()
+                    policy => policy.WithOrigins("http://localhost:5173" , "http://localhost:5174")
                                     .AllowAnyMethod()
-                                    .AllowAnyHeader());
+                                    .AllowAnyHeader()
+                                    .AllowCredentials());
             });
 
 
             var app = builder.Build();
+
             app.UseCors("AllowReactApp");
 
             using var scope = app.Services.CreateScope();
+
 
             var services = scope.ServiceProvider;
 
@@ -122,6 +136,12 @@ namespace ApartmentFinishingServices.APIs
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.MapHub<ChatHub>("/chatHub", options => {
+                options.Transports = HttpTransportType.WebSockets | HttpTransportType.LongPolling;
+                options.CloseOnAuthenticationExpiration = true;
+                options.WebSockets.CloseTimeout = TimeSpan.FromSeconds(10);
+            });
 
             app.MapControllers();
 

@@ -14,6 +14,7 @@ namespace ApartmentFinishingServices.Core.Repository.Contract
         Task<IReadOnlyList<T>> GetAllWithSpec(ISpecification<T> spec);
         Task<T?> GetByIdWithSpec(ISpecification<T> spec);
         Task<int> GetCount(ISpecification<T> spec);
+        Task<int> GetCount();
         Task<T?>GetById(int id);
         Task Add(T entity);
         void Update(T entity);

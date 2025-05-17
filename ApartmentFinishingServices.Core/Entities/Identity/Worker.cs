@@ -9,7 +9,7 @@ namespace ApartmentFinishingServices.Core.Entities.Identity
     public class Worker : BaseEntity
     {
         public string? Description { get; set; }
-        public int Rating { get; set; }
+        //public int Rating { get; set; }
         public int? MinPrice { get; set; }
         public int? MaxPrice { get; set; }
         public int? ServiceId { get; set; }

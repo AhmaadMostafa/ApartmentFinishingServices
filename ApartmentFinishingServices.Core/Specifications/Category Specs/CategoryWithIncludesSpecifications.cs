@@ -1,4 +1,5 @@
 ﻿using ApartmentFinishingServices.Core.Entities;
+using ApartmentFinishingServices.Core.Entities.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,9 @@ namespace ApartmentFinishingServices.Core.Specifications.Category_Specs
         }
         private void AddIncludes()
         {
-            AddInclude(q => q.Include(p => p.Services).ThenInclude(p => p.Workers).ThenInclude(u => u.AppUser).ThenInclude(c => c.City));
+            AddInclude(q => q.Include(p => p.Services).ThenInclude(p => p.Workers).ThenInclude(p => p.Reviews));
+            AddInclude(q => q.Include(p => p.Services).ThenInclude(p => p.Workers).ThenInclude(p => p.AppUser)
+            .ThenInclude(p => p.City));
             //AddInclude(q => q.Include(p => p.Category));
         }
     }

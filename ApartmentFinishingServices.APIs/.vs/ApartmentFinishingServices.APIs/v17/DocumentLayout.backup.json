@@ -11,53 +11,35 @@
       "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:helpers\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FF6BA83-90CB-4678-B01D-B6CFDAC51EBD}|..\\ApartmentFinishingServices.Service\\ApartmentFinishingServices.Service.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.service\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\specifications\\request specs\\workerrequestsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC66F898-9650-45FE-B3F5-455259AB1C2B}|..\\ApartmentFinishingServices.Repository\\ApartmentFinishingServices.Repository.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.repository\\genricrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\dtos\\requesttoreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:dtos\\requesttoreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\repository.contract\\igenricrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FF6BA83-90CB-4678-B01D-B6CFDAC51EBD}|..\\ApartmentFinishingServices.Service\\ApartmentFinishingServices.Service.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.service\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\dtos\\admindtos\\admintoreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:dtos\\admindtos\\admintoreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FF6BA83-90CB-4678-B01D-B6CFDAC51EBD}|..\\ApartmentFinishingServices.Service\\ApartmentFinishingServices.Service.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.service\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FF6BA83-90CB-4678-B01D-B6CFDAC51EBD}|..\\ApartmentFinishingServices.Service\\ApartmentFinishingServices.Service.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\specifications\\service specs\\servicewithincludesspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\specifications\\worker specs\\workerwithdetailsspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\entities\\identity\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{904B046B-E38D-48D4-8D1B-6B3DA002144B}|..\\ApartmentFinishingServices.Core\\ApartmentFinishingServices.Core.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.core\\services.contract\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|c:\\users\\ahmad\\downloads\\apartmentfinishingservices-main\\apartmentfinishingservices-main\\apartmentfinishingservices.apis\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{358F25E4-4C1F-443D-A63D-64578DE0E400}|ApartmentFinishingServices.APIs.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,24 +49,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:47:22.967Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -94,179 +63,130 @@
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAHsBAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:47:15.183Z",
+              "WhenOpened": "2025-05-16T15:05:56.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T13:30:32.981Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RequestToReturnDto.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Dtos\\RequestToReturnDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\RequestToReturnDto.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Dtos\\RequestToReturnDto.cs",
-              "RelativeToolTip": "Dtos\\RequestToReturnDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:47:53.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReviewService.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\ReviewService.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Service\\ReviewService.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\ReviewService.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Service\\ReviewService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwCUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:43:05.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WorkerRequestsSpecification.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Request specs\\WorkerRequestsSpecification.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Specifications\\Request specs\\WorkerRequestsSpecification.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Request specs\\WorkerRequestsSpecification.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Specifications\\Request specs\\WorkerRequestsSpecification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:56:53.955Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Helpers\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "Helpers\\MappingProfiles.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Helpers\\MappingProfiles.cs",
-              "RelativeToolTip": "Helpers\\MappingProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABLAAAAAAAAAA==",
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\AdminService.cs",
+              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Service\\AdminService.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\AdminService.cs",
+              "RelativeToolTip": "..\\ApartmentFinishingServices.Service\\AdminService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAwwKEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:52:02.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T13:29:15.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RequestsController.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\RequestsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RequestsController.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\RequestsController.cs",
-              "RelativeToolTip": "Controllers\\RequestsController.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHgAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IGenricRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Repository.Contract\\IGenricRepository.cs",
+              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Repository.Contract\\IGenricRepository.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Repository.Contract\\IGenricRepository.cs",
+              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Repository.Contract\\IGenricRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:48:35.244Z"
+              "WhenOpened": "2025-05-16T13:17:03.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenricRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Repository\\GenricRepository.cs",
+              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Repository\\GenricRepository.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Repository\\GenricRepository.cs",
+              "RelativeToolTip": "..\\ApartmentFinishingServices.Repository\\GenricRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T13:14:49.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminToReturnDto.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Dtos\\AdminDtos\\AdminToReturnDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\AdminDtos\\AdminToReturnDto.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Dtos\\AdminDtos\\AdminToReturnDto.cs",
+              "RelativeToolTip": "Dtos\\AdminDtos\\AdminToReturnDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T12:51:14.581Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ReviewsController.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\ReviewsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\ReviewsController.cs",
-              "RelativeToolTip": "Controllers\\ReviewsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CitiesController.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "Controllers\\CitiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:26:15.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ServiceWithIncludesSpecifications.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Service specs\\ServiceWithIncludesSpecifications.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Specifications\\Service specs\\ServiceWithIncludesSpecifications.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Service specs\\ServiceWithIncludesSpecifications.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Specifications\\Service specs\\ServiceWithIncludesSpecifications.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T01:54:08.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\CategoryService.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Service\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\CategoryService.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Service\\CategoryService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAuwC0AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T01:54:03.438Z"
+              "WhenOpened": "2025-05-14T23:08:14.249Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "RequestService.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\RequestService.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Service\\RequestService.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Service\\RequestService.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Service\\RequestService.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T01:47:58.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGQAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T00:38:58.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAuwDEAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T00:37:40.636Z"
+              "WhenOpened": "2025-05-16T00:28:30.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-09T00:34:35.797Z"
+              "DocumentIndex": 8,
+              "Title": "WorkerWithDetailsSpecification.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Worker Specs\\WorkerWithDetailsSpecification.cs",
+              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Specifications\\Worker Specs\\WorkerWithDetailsSpecification.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Specifications\\Worker Specs\\WorkerWithDetailsSpecification.cs",
+              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Specifications\\Worker Specs\\WorkerWithDetailsSpecification.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADgvx0AAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T23:57:27.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Entities\\Identity\\Customer.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Entities\\Identity\\Customer.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Entities\\Identity\\Customer.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Entities\\Identity\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.APIs\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T14:50:58.118Z"
+              "WhenOpened": "2025-05-15T22:57:50.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Services.Contract\\IAdminService.cs",
-              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Services.Contract\\IAdminService.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Services.Contract\\IAdminService.cs",
-              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Services.Contract\\IAdminService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "..\\ApartmentFinishingServices.Core\\Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\Ahmad\\Downloads\\ApartmentFinishingServices-main\\ApartmentFinishingServices-main\\ApartmentFinishingServices.Core\\Entities\\Review.cs",
+              "RelativeToolTip": "..\\ApartmentFinishingServices.Core\\Entities\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T14:46:06.548Z"
+              "WhenOpened": "2025-05-14T23:01:39.35Z"
             }
           ]
         }

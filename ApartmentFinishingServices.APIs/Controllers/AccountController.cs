@@ -1,10 +1,13 @@
 ﻿using ApartmentFinishingServices.APIs.Dtos;
+using ApartmentFinishingServices.APIs.Dtos.AdminDtos;
 using ApartmentFinishingServices.APIs.Errors;
 using ApartmentFinishingServices.APIs.Extenstions;
 using ApartmentFinishingServices.Core.Entities;
 using ApartmentFinishingServices.Core.Entities.Identity;
 using ApartmentFinishingServices.Core.Repository.Contract;
 using ApartmentFinishingServices.Core.Services.Contract;
+using ApartmentFinishingServices.Core.Specifications.Admin_Specs;
+using ApartmentFinishingServices.Core.Specifications.Request_specs;
 using ApartmentFinishingServices.Service;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -22,6 +25,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
         private readonly IGenricRepository<Customer> _customerRepo;
         private readonly IGenricRepository<Worker> _workerRepo;
         private readonly IGenricRepository<City> _cityRepo;
+        private readonly IGenricRepository<Admin> _adminRepo;
         private readonly IGenricRepository<AvailableDay> _availableDayRepo;
         private readonly IGenricRepository<Services> _serviceRepo;
         private readonly UserManager<AppUser> _userManager;
@@ -36,7 +40,8 @@ namespace ApartmentFinishingServices.APIs.Controllers
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
             IAuthService authService , IGenricRepository<Customer> customerRepo , IGenricRepository<City> cityRepo
             , IGenricRepository<Worker> workerRepo , IGenricRepository<Services> serviceRepo, IMapper mapper
-            , IGenricRepository<AvailableDay> availableDayRepo , IWebHostEnvironment environment , IFileService fileService)
+            , IGenricRepository<AvailableDay> availableDayRepo , IWebHostEnvironment environment , IFileService fileService
+            ,IGenricRepository<Admin> adminRepo)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -46,6 +51,7 @@ namespace ApartmentFinishingServices.APIs.Controllers
             _availableDayRepo = availableDayRepo;
             _environment = environment;
             _fileService = fileService;
+            _adminRepo = adminRepo;
             _customerRepo = customerRepo;
             _workerRepo = workerRepo;
             _mapper = mapper;
@@ -99,6 +105,44 @@ namespace ApartmentFinishingServices.APIs.Controllers
             return user;
         }
 
+        [HttpPut("update")]
+        public async Task<ActionResult> UpdateProfile([FromForm] UpdateProfileDto model)
+        {
+            var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
+
+            if (user == null)
+                return NotFound(new ApiResponse(404, "User not found"));
+
+            if (model.CityId.HasValue)
+            {
+                var cityExists = await _cityRepo.GetById(model.CityId.Value);
+                if (cityExists == null)
+                    return BadRequest(new ApiValidationErrorResponse { Errors = new[] { "Invalid city" } });
+            }   
+
+            if (!string.IsNullOrEmpty(model.Name))
+                user.Name = model.Name;
+
+            if (!string.IsNullOrEmpty(model.PhoneNumber))
+                user.PhoneNumber = model.PhoneNumber;
+
+            if (!string.IsNullOrEmpty(model.Address))
+                user.Address = model.Address;
+
+            if (model.CityId.HasValue)
+                user.CityId = model.CityId.Value;
+
+            if (model.Age.HasValue)
+                user.Age = model.Age.Value;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return BadRequest(new ApiValidationErrorResponse { Errors = result.Errors.Select(e => e.Description).ToArray() });
+
+            return Ok(new ApiResponse(200, "Profile updated successfully"));
+        }
+
+
         [HttpPost("register/customer")]
         public async Task<ActionResult<CustomerToReturnDto>> RegisterAsCustomer(RegisterAsCustomerDto model)
         {
@@ -131,7 +175,9 @@ namespace ApartmentFinishingServices.APIs.Controllers
             var cityExist = await _cityRepo.GetById(user.CityId);
             if (result.Succeeded is false)
                 return Unauthorized(new ApiResponse(401));
-            return Ok(new CustomerToReturnDto()
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var userInfo = new UserResponseBaseDto()
             {
                 DisplayName = user.Name,
                 Email = user.Email,
@@ -141,7 +187,38 @@ namespace ApartmentFinishingServices.APIs.Controllers
                 Age = user.Age,
                 ProfilePictureUrl = user.ProfilePictureUrl,
                 Token = await _authService.CreateTokenAsync(user, _userManager)
-            });
+            };
+            if(roles.Contains("Worker"))
+            {
+                var worker = await _workerRepo.GetByIdWithSpec(new WorkerByAppUserIdSpecification(user.Id));
+                if(worker != null)
+                {
+                    var workerDto = _mapper.Map<WorkerToReturnDtoWithEarnings>(userInfo);
+                    workerDto.TotalEarnings = worker.TotalEarnings;
+                    return Ok(workerDto);
+                }
+            }
+            else if (roles.Contains("Admin"))
+            {
+                var admin = await _adminRepo.GetByIdWithSpec(new AdminByAppUserIdSpecification(user.Id));
+                if(admin != null)
+                {
+                    var adminDto = _mapper.Map<AdminToReturnDto>(userInfo);
+                    adminDto.TotalEarnings = admin.TotalEarnings;
+                    var customerSpecParams = new Core.Specifications.Customer_Specs.CustomerSpecParams();
+                    var workerSpecParams = new Core.Specifications.Worker_Specs.WorkerSpecParams();
+
+                    var totalCustomers = await _customerRepo.GetCount();
+                    var totalWorkers = await _workerRepo.GetCount();
+
+                    adminDto.TotalCustomers = totalCustomers;
+                    adminDto.TotalWorkers = totalWorkers;
+
+                    return Ok(adminDto);
+                }
+            }
+            return Ok(userInfo);
+
         }
         [HttpGet("emailexists")] // GET /api/accounts/emailexists?email=ahmedmostafa8011@gmail.com
         public async Task<ActionResult<bool>> CheckEmailExists(string email)
@@ -164,7 +241,6 @@ namespace ApartmentFinishingServices.APIs.Controllers
             var worker = new Worker()
             {
                 Description = string.IsNullOrEmpty(model.Description) ? "New Worker" : model.Description,
-                Rating = 0,
                 MinPrice = model.MinPrice,
                 MaxPrice = model.MaxPrice,
                 ServiceId = model.ServiceId,
@@ -273,7 +349,6 @@ namespace ApartmentFinishingServices.APIs.Controllers
 
             try
             {
-                // Delete old picture if exists
                 if (!string.IsNullOrEmpty(user.ProfilePictureUrl))
                 {
                     var oldFileName = Path.GetFileName(user.ProfilePictureUrl);
@@ -283,11 +358,10 @@ namespace ApartmentFinishingServices.APIs.Controllers
                     }
                     catch (FileNotFoundException)
                     {
-                        // Old file not found - proceed anyway
+
                     }
                 }
 
-                // Save new picture
                 var fileName = await _fileService.SaveFileAsync(newProfilePicture, _allowedProfilePictureExtensions);
                 user.ProfilePictureUrl = $"https://localhost:7118/resources/{fileName}";
 

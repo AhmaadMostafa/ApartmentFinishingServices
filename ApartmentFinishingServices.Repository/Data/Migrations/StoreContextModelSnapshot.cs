@@ -70,6 +70,44 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.ChatMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RequestId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("RequestId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("ChatMessages");
+                });
+
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.City", b =>
                 {
                     b.Property<int>("Id")
@@ -241,9 +279,6 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
 
                     b.Property<decimal?>("MinPrice")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
 
                     b.Property<int?>("ServiceId")
                         .HasColumnType("int");
@@ -578,6 +613,33 @@ namespace ApartmentFinishingServices.Repository.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Worker");
+                });
+
+            modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.ChatMessage", b =>
+                {
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.AppUser", "Receiver")
+                        .WithMany()
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Request", "Request")
+                        .WithMany()
+                        .HasForeignKey("RequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApartmentFinishingServices.Core.Entities.Identity.AppUser", "Sender")
+                        .WithMany()
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Request");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("ApartmentFinishingServices.Core.Entities.Identity.Admin", b =>

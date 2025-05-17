@@ -150,7 +150,12 @@ namespace ApartmentFinishingServices.Service
             if (user == null) return false;
 
             var result = await _userManager.SetLockoutEndDateAsync(user, DateTimeOffset.MaxValue);
-
+            if (result.Succeeded)
+            {
+                user.IsBlocked = true;
+                var updateResult = await _userManager.UpdateAsync(user);
+                return updateResult.Succeeded;
+            }
             return result.Succeeded;
         }
 
@@ -161,6 +166,12 @@ namespace ApartmentFinishingServices.Service
             if (user == null) return false;
 
             var result = await _userManager.SetLockoutEndDateAsync(user, null);
+            if (result.Succeeded)
+            {
+                user.IsBlocked = false;
+                var updateResult = await _userManager.UpdateAsync(user);
+                return updateResult.Succeeded;
+            }
 
             return result.Succeeded;
         }
