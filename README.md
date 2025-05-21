@@ -1,7 +1,5 @@
 # Smart Finish Platform - Backend
 
-![Project Banner](https://via.placeholder.com/1200x400?text=Smart+Finish+Platform) <!-- Add your actual banner image -->
-
 ## 📝 Table of Contents
 - [Project Description](#-project-description)
 - [Technology Stack](#-technology-stack)
